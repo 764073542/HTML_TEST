@@ -5,10 +5,10 @@ function check_input()
 	var b = check_password();
 	var c = check_confirm();
 	if(a && b && c){
-		alert("×¢²á³É¹¦");
+		alert("Success");
 	}
 	else{
-		alert("ÓÃ»§ĞÅÏ¢ÌîĞ´ÓĞÎó");
+		alert("user info error!");
 	}
 }	
 function check_confirm(){
@@ -19,7 +19,7 @@ function check_confirm(){
 	if(confirm!= password)
 	{		
 		document.getElementById("info_confim").style.color="red";
-		document.getElementById("info_confim").innerHTML="Á½´ÎÃÜÂëÊäÈë²»Ò»ÖÂ";
+		document.getElementById("info_confim").innerHTML="Passwords do not match!";
 		return false;
 	}
 	else{
@@ -34,7 +34,7 @@ function check_password(){
 	if(!reg_password.test(password))
 	{
 		document.getElementById("info_password").style.color="red";
-		document.getElementById("info_password").innerHTML="ÃÜÂë²»Âú×ãÌõ¼ş";
+		document.getElementById("info_password").innerHTML="Password Error";
 		return false;
 	}
 	else{
@@ -46,10 +46,10 @@ function check_password(){
 function check_username(){
 	var username = document.getElementById("username").value;	
 	var reg_username = /^[a-zA-Z][a-zA-Z0-9]{5,16}$/;
-	if(!reg_username.test(username)) //ÓÃ»§ÃûÅĞ¶Ï
+	if(!reg_username.test(username)) //ç”¨æˆ·ååˆ¤æ–­
 	{		
 		document.getElementById("info_username").style.color="red";
-		document.getElementById("info_username").innerHTML="ÓÃ»§Ãû²»Âú×ãÌõ¼ş";		
+		document.getElementById("info_username").innerHTML="userName Error!";		
 		return false;
 	}else{
 		document.getElementById("info_username").style.color="black";
